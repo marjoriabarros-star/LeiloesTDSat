@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,6 +12,8 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Adm
  */
+
+
 public class listagemVIEW extends javax.swing.JFrame {
 
     /**
@@ -187,7 +190,14 @@ public class listagemVIEW extends javax.swing.JFrame {
             }
         });
     }
-
+private void carregarDados() {
+    try {
+        // SELECT * FROM tabela_itens
+        // Preencher JTable ou lista
+    } catch (Exception e) {
+        exibirMensagem("Erro ao carregar dados: " + e.getMessage());
+    }
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVendas;
     private javax.swing.JButton btnVender;
@@ -221,5 +231,9 @@ public class listagemVIEW extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     
+    }
+
+    private void exibirMensagem(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
